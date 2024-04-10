@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,14 +20,13 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.RadioButton6 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton5 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.regularRB = New System.Windows.Forms.RadioButton()
+        Me.probationaryRB = New System.Windows.Forms.RadioButton()
+        Me.staffRB = New System.Windows.Forms.RadioButton()
+        Me.oicRB = New System.Windows.Forms.RadioButton()
+        Me.deptheadRB = New System.Windows.Forms.RadioButton()
         Me.departmentCB = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.toDTP = New System.Windows.Forms.DateTimePicker()
@@ -40,85 +39,69 @@ Partial Class Form1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lastnameTB = New System.Windows.Forms.TextBox()
-        Me.searchBTN = New System.Windows.Forms.Button()
-        Me.EmployeesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSplitButton1 = New System.Windows.Forms.ToolStripSplitButton()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.employeesDVG = New System.Windows.Forms.DataGridView()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        Me.ToolStrip1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.employeesDVG, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
         Me.SuspendLayout()
         '
-        'RadioButton6
+        'regularRB
         '
-        Me.RadioButton6.AutoSize = True
-        Me.RadioButton6.Location = New System.Drawing.Point(693, 56)
-        Me.RadioButton6.Name = "RadioButton6"
-        Me.RadioButton6.Size = New System.Drawing.Size(44, 21)
-        Me.RadioButton6.TabIndex = 16
-        Me.RadioButton6.TabStop = True
-        Me.RadioButton6.Text = "All"
-        Me.RadioButton6.UseVisualStyleBackColor = True
+        Me.regularRB.AutoSize = True
+        Me.regularRB.Location = New System.Drawing.Point(22, 23)
+        Me.regularRB.Name = "regularRB"
+        Me.regularRB.Size = New System.Drawing.Size(79, 21)
+        Me.regularRB.TabIndex = 15
+        Me.regularRB.TabStop = True
+        Me.regularRB.Text = "Regular"
+        Me.regularRB.UseVisualStyleBackColor = True
         '
-        'RadioButton5
+        'probationaryRB
         '
-        Me.RadioButton5.AutoSize = True
-        Me.RadioButton5.Location = New System.Drawing.Point(22, 23)
-        Me.RadioButton5.Name = "RadioButton5"
-        Me.RadioButton5.Size = New System.Drawing.Size(79, 21)
-        Me.RadioButton5.TabIndex = 15
-        Me.RadioButton5.TabStop = True
-        Me.RadioButton5.Text = "Regular"
-        Me.RadioButton5.UseVisualStyleBackColor = True
+        Me.probationaryRB.AutoSize = True
+        Me.probationaryRB.Location = New System.Drawing.Point(22, 47)
+        Me.probationaryRB.Name = "probationaryRB"
+        Me.probationaryRB.Size = New System.Drawing.Size(110, 21)
+        Me.probationaryRB.TabIndex = 14
+        Me.probationaryRB.TabStop = True
+        Me.probationaryRB.Text = "Probationary"
+        Me.probationaryRB.UseVisualStyleBackColor = True
         '
-        'RadioButton4
+        'staffRB
         '
-        Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Location = New System.Drawing.Point(22, 47)
-        Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(110, 21)
-        Me.RadioButton4.TabIndex = 14
-        Me.RadioButton4.TabStop = True
-        Me.RadioButton4.Text = "Probationary"
-        Me.RadioButton4.UseVisualStyleBackColor = True
+        Me.staffRB.AutoSize = True
+        Me.staffRB.Location = New System.Drawing.Point(7, 49)
+        Me.staffRB.Name = "staffRB"
+        Me.staffRB.Size = New System.Drawing.Size(58, 21)
+        Me.staffRB.TabIndex = 13
+        Me.staffRB.TabStop = True
+        Me.staffRB.Text = "Staff"
+        Me.staffRB.UseVisualStyleBackColor = True
         '
-        'RadioButton3
+        'oicRB
         '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(7, 49)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(58, 21)
-        Me.RadioButton3.TabIndex = 13
-        Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "Staff"
-        Me.RadioButton3.UseVisualStyleBackColor = True
+        Me.oicRB.AutoSize = True
+        Me.oicRB.Location = New System.Drawing.Point(114, 22)
+        Me.oicRB.Name = "oicRB"
+        Me.oicRB.Size = New System.Drawing.Size(136, 21)
+        Me.oicRB.TabIndex = 12
+        Me.oicRB.TabStop = True
+        Me.oicRB.Text = "Officer In Charge"
+        Me.oicRB.UseVisualStyleBackColor = True
         '
-        'RadioButton2
+        'deptheadRB
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(114, 22)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(136, 21)
-        Me.RadioButton2.TabIndex = 12
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Officer In Charge"
-        Me.RadioButton2.UseVisualStyleBackColor = True
-        '
-        'RadioButton1
-        '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(7, 21)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(101, 21)
-        Me.RadioButton1.TabIndex = 11
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Dept. Head"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.deptheadRB.AutoSize = True
+        Me.deptheadRB.Location = New System.Drawing.Point(7, 21)
+        Me.deptheadRB.Name = "deptheadRB"
+        Me.deptheadRB.Size = New System.Drawing.Size(101, 21)
+        Me.deptheadRB.TabIndex = 11
+        Me.deptheadRB.TabStop = True
+        Me.deptheadRB.Text = "Dept. Head"
+        Me.deptheadRB.UseVisualStyleBackColor = True
         '
         'departmentCB
         '
@@ -153,8 +136,8 @@ Partial Class Form1
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.RadioButton5)
-        Me.GroupBox3.Controls.Add(Me.RadioButton4)
+        Me.GroupBox3.Controls.Add(Me.regularRB)
+        Me.GroupBox3.Controls.Add(Me.probationaryRB)
         Me.GroupBox3.Location = New System.Drawing.Point(507, 28)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(155, 82)
@@ -173,9 +156,9 @@ Partial Class Form1
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.RadioButton3)
-        Me.GroupBox2.Controls.Add(Me.RadioButton2)
-        Me.GroupBox2.Controls.Add(Me.RadioButton1)
+        Me.GroupBox2.Controls.Add(Me.staffRB)
+        Me.GroupBox2.Controls.Add(Me.oicRB)
+        Me.GroupBox2.Controls.Add(Me.deptheadRB)
         Me.GroupBox2.Controls.Add(Me.departmentCB)
         Me.GroupBox2.Location = New System.Drawing.Point(232, 28)
         Me.GroupBox2.Name = "GroupBox2"
@@ -211,7 +194,7 @@ Partial Class Form1
         '
         'firstnameTB
         '
-        Me.firstnameTB.Location = New System.Drawing.Point(98, 80)
+        Me.firstnameTB.Location = New System.Drawing.Point(98, 54)
         Me.firstnameTB.Name = "firstnameTB"
         Me.firstnameTB.Size = New System.Drawing.Size(185, 22)
         Me.firstnameTB.TabIndex = 17
@@ -219,7 +202,7 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(9, 83)
+        Me.Label2.Location = New System.Drawing.Point(9, 57)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(80, 17)
         Me.Label2.TabIndex = 16
@@ -228,7 +211,7 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(9, 46)
+        Me.Label1.Location = New System.Drawing.Point(9, 20)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(80, 17)
         Me.Label1.TabIndex = 15
@@ -236,64 +219,28 @@ Partial Class Form1
         '
         'lastnameTB
         '
-        Me.lastnameTB.Location = New System.Drawing.Point(98, 43)
+        Me.lastnameTB.Location = New System.Drawing.Point(98, 17)
         Me.lastnameTB.Name = "lastnameTB"
         Me.lastnameTB.Size = New System.Drawing.Size(185, 22)
         Me.lastnameTB.TabIndex = 14
         '
-        'searchBTN
+        'employeesDVG
         '
-        Me.searchBTN.Location = New System.Drawing.Point(302, 43)
-        Me.searchBTN.Name = "searchBTN"
-        Me.searchBTN.Size = New System.Drawing.Size(121, 59)
-        Me.searchBTN.TabIndex = 13
-        Me.searchBTN.Text = "Search"
-        Me.searchBTN.UseVisualStyleBackColor = True
-        '
-        'EmployeesToolStripMenuItem
-        '
-        Me.EmployeesToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.EmployeesToolStripMenuItem.Name = "EmployeesToolStripMenuItem"
-        Me.EmployeesToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
-        Me.EmployeesToolStripMenuItem.Text = "Employees"
-        '
-        'ToolStripSplitButton1
-        '
-        Me.ToolStripSplitButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.ToolStripSplitButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmployeesToolStripMenuItem})
-        Me.ToolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripSplitButton1.Name = "ToolStripSplitButton1"
-        Me.ToolStripSplitButton1.Size = New System.Drawing.Size(65, 24)
-        Me.ToolStripSplitButton1.Text = "Menu"
-        '
-        'ToolStrip1
-        '
-        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripSplitButton1})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(782, 27)
-        Me.ToolStrip1.TabIndex = 12
-        Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 253)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(758, 294)
-        Me.DataGridView1.TabIndex = 11
+        Me.employeesDVG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.employeesDVG.Location = New System.Drawing.Point(12, 227)
+        Me.employeesDVG.Name = "employeesDVG"
+        Me.employeesDVG.RowTemplate.Height = 24
+        Me.employeesDVG.Size = New System.Drawing.Size(758, 294)
+        Me.employeesDVG.TabIndex = 11
         '
         'GroupBox4
         '
-        Me.GroupBox4.Controls.Add(Me.RadioButton6)
         Me.GroupBox4.Controls.Add(Me.GroupBox3)
         Me.GroupBox4.Controls.Add(Me.GroupBox2)
         Me.GroupBox4.Controls.Add(Me.GroupBox1)
-        Me.GroupBox4.Location = New System.Drawing.Point(12, 131)
+        Me.GroupBox4.Location = New System.Drawing.Point(12, 105)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(758, 116)
+        Me.GroupBox4.Size = New System.Drawing.Size(679, 116)
         Me.GroupBox4.TabIndex = 18
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Filter:"
@@ -302,14 +249,12 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(782, 553)
+        Me.ClientSize = New System.Drawing.Size(782, 533)
         Me.Controls.Add(Me.firstnameTB)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lastnameTB)
-        Me.Controls.Add(Me.searchBTN)
-        Me.Controls.Add(Me.ToolStrip1)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.employeesDVG)
         Me.Controls.Add(Me.GroupBox4)
         Me.Name = "Form1"
         Me.Text = "Home"
@@ -319,22 +264,17 @@ Partial Class Form1
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        Me.ToolStrip1.ResumeLayout(False)
-        Me.ToolStrip1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.employeesDVG, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
-        Me.GroupBox4.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents RadioButton6 As RadioButton
-    Friend WithEvents RadioButton5 As RadioButton
-    Friend WithEvents RadioButton4 As RadioButton
-    Friend WithEvents RadioButton3 As RadioButton
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents regularRB As RadioButton
+    Friend WithEvents probationaryRB As RadioButton
+    Friend WithEvents staffRB As RadioButton
+    Friend WithEvents oicRB As RadioButton
+    Friend WithEvents deptheadRB As RadioButton
     Friend WithEvents departmentCB As ComboBox
     Friend WithEvents Label4 As Label
     Friend WithEvents toDTP As DateTimePicker
@@ -347,10 +287,6 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents lastnameTB As TextBox
-    Friend WithEvents searchBTN As Button
-    Friend WithEvents EmployeesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolStripSplitButton1 As ToolStripSplitButton
-    Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents employeesDVG As DataGridView
     Friend WithEvents GroupBox4 As GroupBox
 End Class
