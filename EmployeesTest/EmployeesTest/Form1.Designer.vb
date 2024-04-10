@@ -31,8 +31,10 @@ Partial Class Form1
         Me.Label4 = New System.Windows.Forms.Label()
         Me.toDTP = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.allRB2 = New System.Windows.Forms.RadioButton()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.allRB = New System.Windows.Forms.RadioButton()
         Me.fromDTP = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.firstnameTB = New System.Windows.Forms.TextBox()
@@ -41,17 +43,19 @@ Partial Class Form1
         Me.lastnameTB = New System.Windows.Forms.TextBox()
         Me.employeesDVG = New System.Windows.Forms.DataGridView()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.employeesDVG, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
         Me.SuspendLayout()
         '
         'regularRB
         '
         Me.regularRB.AutoSize = True
-        Me.regularRB.Location = New System.Drawing.Point(22, 23)
+        Me.regularRB.Location = New System.Drawing.Point(70, 21)
         Me.regularRB.Name = "regularRB"
         Me.regularRB.Size = New System.Drawing.Size(79, 21)
         Me.regularRB.TabIndex = 15
@@ -95,7 +99,7 @@ Partial Class Form1
         'deptheadRB
         '
         Me.deptheadRB.AutoSize = True
-        Me.deptheadRB.Location = New System.Drawing.Point(7, 21)
+        Me.deptheadRB.Location = New System.Drawing.Point(114, 49)
         Me.deptheadRB.Name = "deptheadRB"
         Me.deptheadRB.Size = New System.Drawing.Size(101, 21)
         Me.deptheadRB.TabIndex = 11
@@ -106,8 +110,7 @@ Partial Class Form1
         'departmentCB
         '
         Me.departmentCB.FormattingEnabled = True
-        Me.departmentCB.Items.AddRange(New Object() {"IT", "Personnel Managemen", "Billing", "Marketing", "Accounting", "Finance"})
-        Me.departmentCB.Location = New System.Drawing.Point(82, 47)
+        Me.departmentCB.Location = New System.Drawing.Point(16, 33)
         Me.departmentCB.Name = "departmentCB"
         Me.departmentCB.Size = New System.Drawing.Size(163, 24)
         Me.departmentCB.TabIndex = 10
@@ -125,25 +128,38 @@ Partial Class Form1
         'toDTP
         '
         Me.toDTP.CalendarForeColor = System.Drawing.SystemColors.ControlDark
-        Me.toDTP.CustomFormat = "mm/dd/yyyy"
+        Me.toDTP.CustomFormat = "dd/mm/yyyy"
         Me.toDTP.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.toDTP.ImeMode = System.Windows.Forms.ImeMode.Off
         Me.toDTP.Location = New System.Drawing.Point(72, 49)
         Me.toDTP.Name = "toDTP"
         Me.toDTP.Size = New System.Drawing.Size(115, 22)
         Me.toDTP.TabIndex = 11
-        Me.toDTP.Value = New Date(2024, 1, 1, 0, 0, 0, 0)
+        Me.toDTP.Value = New Date(2024, 4, 10, 0, 0, 0, 0)
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.allRB2)
         Me.GroupBox3.Controls.Add(Me.regularRB)
         Me.GroupBox3.Controls.Add(Me.probationaryRB)
-        Me.GroupBox3.Location = New System.Drawing.Point(507, 28)
+        Me.GroupBox3.Location = New System.Drawing.Point(722, 28)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(155, 82)
         Me.GroupBox3.TabIndex = 9
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Employment Status"
+        '
+        'allRB2
+        '
+        Me.allRB2.AutoSize = True
+        Me.allRB2.Checked = True
+        Me.allRB2.Location = New System.Drawing.Point(22, 22)
+        Me.allRB2.Name = "allRB2"
+        Me.allRB2.Size = New System.Drawing.Size(44, 21)
+        Me.allRB2.TabIndex = 15
+        Me.allRB2.TabStop = True
+        Me.allRB2.Text = "All"
+        Me.allRB2.UseVisualStyleBackColor = True
         '
         'Label3
         '
@@ -156,21 +172,33 @@ Partial Class Form1
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.allRB)
         Me.GroupBox2.Controls.Add(Me.staffRB)
         Me.GroupBox2.Controls.Add(Me.oicRB)
         Me.GroupBox2.Controls.Add(Me.deptheadRB)
-        Me.GroupBox2.Controls.Add(Me.departmentCB)
         Me.GroupBox2.Location = New System.Drawing.Point(232, 28)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(251, 82)
         Me.GroupBox2.TabIndex = 9
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Position - Department"
+        Me.GroupBox2.Text = "Position"
+        '
+        'allRB
+        '
+        Me.allRB.AutoSize = True
+        Me.allRB.Checked = True
+        Me.allRB.Location = New System.Drawing.Point(7, 21)
+        Me.allRB.Name = "allRB"
+        Me.allRB.Size = New System.Drawing.Size(44, 21)
+        Me.allRB.TabIndex = 14
+        Me.allRB.TabStop = True
+        Me.allRB.Text = "All"
+        Me.allRB.UseVisualStyleBackColor = True
         '
         'fromDTP
         '
         Me.fromDTP.CalendarForeColor = System.Drawing.SystemColors.ControlDark
-        Me.fromDTP.CustomFormat = "mm/dd/yyyy"
+        Me.fromDTP.CustomFormat = "dd/mm/yyyy"
         Me.fromDTP.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.fromDTP.ImeMode = System.Windows.Forms.ImeMode.Off
         Me.fromDTP.Location = New System.Drawing.Point(72, 21)
@@ -230,26 +258,37 @@ Partial Class Form1
         Me.employeesDVG.Location = New System.Drawing.Point(12, 227)
         Me.employeesDVG.Name = "employeesDVG"
         Me.employeesDVG.RowTemplate.Height = 24
-        Me.employeesDVG.Size = New System.Drawing.Size(758, 294)
+        Me.employeesDVG.Size = New System.Drawing.Size(887, 294)
         Me.employeesDVG.TabIndex = 11
         '
         'GroupBox4
         '
         Me.GroupBox4.Controls.Add(Me.GroupBox3)
+        Me.GroupBox4.Controls.Add(Me.GroupBox5)
         Me.GroupBox4.Controls.Add(Me.GroupBox2)
         Me.GroupBox4.Controls.Add(Me.GroupBox1)
         Me.GroupBox4.Location = New System.Drawing.Point(12, 105)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(679, 116)
+        Me.GroupBox4.Size = New System.Drawing.Size(887, 116)
         Me.GroupBox4.TabIndex = 18
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Filter:"
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.departmentCB)
+        Me.GroupBox5.Location = New System.Drawing.Point(501, 28)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(200, 82)
+        Me.GroupBox5.TabIndex = 15
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "Department"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(782, 533)
+        Me.ClientSize = New System.Drawing.Size(912, 533)
         Me.Controls.Add(Me.firstnameTB)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -266,6 +305,7 @@ Partial Class Form1
         Me.GroupBox1.PerformLayout()
         CType(Me.employeesDVG, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox5.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -289,4 +329,7 @@ Partial Class Form1
     Friend WithEvents lastnameTB As TextBox
     Friend WithEvents employeesDVG As DataGridView
     Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents allRB As RadioButton
+    Friend WithEvents GroupBox5 As GroupBox
+    Friend WithEvents allRB2 As RadioButton
 End Class
