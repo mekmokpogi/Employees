@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.regularRB = New System.Windows.Forms.RadioButton()
         Me.probationaryRB = New System.Windows.Forms.RadioButton()
         Me.staffRB = New System.Windows.Forms.RadioButton()
@@ -44,12 +45,16 @@ Partial Class Form1
         Me.employeesDVG = New System.Windows.Forms.DataGridView()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.empdvgCMS = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ViewEditDetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.employeesDVG, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
+        Me.empdvgCMS.SuspendLayout()
         Me.SuspendLayout()
         '
         'regularRB
@@ -255,6 +260,7 @@ Partial Class Form1
         'employeesDVG
         '
         Me.employeesDVG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.employeesDVG.ContextMenuStrip = Me.empdvgCMS
         Me.employeesDVG.Location = New System.Drawing.Point(12, 227)
         Me.employeesDVG.Name = "employeesDVG"
         Me.employeesDVG.RowTemplate.Height = 24
@@ -284,6 +290,25 @@ Partial Class Form1
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Department"
         '
+        'empdvgCMS
+        '
+        Me.empdvgCMS.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.empdvgCMS.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewEditDetailsToolStripMenuItem, Me.DeleteToolStripMenuItem})
+        Me.empdvgCMS.Name = "ContextMenuStrip1"
+        Me.empdvgCMS.Size = New System.Drawing.Size(211, 80)
+        '
+        'ViewEditDetailsToolStripMenuItem
+        '
+        Me.ViewEditDetailsToolStripMenuItem.Name = "ViewEditDetailsToolStripMenuItem"
+        Me.ViewEditDetailsToolStripMenuItem.Size = New System.Drawing.Size(210, 24)
+        Me.ViewEditDetailsToolStripMenuItem.Text = "View/Edit Details"
+        '
+        'DeleteToolStripMenuItem
+        '
+        Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(210, 24)
+        Me.DeleteToolStripMenuItem.Text = "Delete"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -306,6 +331,7 @@ Partial Class Form1
         CType(Me.employeesDVG, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox5.ResumeLayout(False)
+        Me.empdvgCMS.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -332,4 +358,7 @@ Partial Class Form1
     Friend WithEvents allRB As RadioButton
     Friend WithEvents GroupBox5 As GroupBox
     Friend WithEvents allRB2 As RadioButton
+    Friend WithEvents empdvgCMS As ContextMenuStrip
+    Friend WithEvents ViewEditDetailsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DeleteToolStripMenuItem As ToolStripMenuItem
 End Class

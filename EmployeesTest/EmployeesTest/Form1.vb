@@ -157,13 +157,8 @@ Public Class Form1
         PerformSearch()
     End Sub
     Private Sub departmentCB_SelectedIndexChanged(sender As Object, e As EventArgs) Handles departmentCB.SelectedIndexChanged
-        ' Set the selected department from the combo box
         Dim selectedDepartment As String = departmentCB.SelectedItem?.ToString()
-
-        ' Call the PerformSearch method to apply all filters
         PerformSearch()
-
-
     End Sub
 
 
@@ -181,5 +176,60 @@ Public Class Form1
 
     Private Sub allRB2_CheckedChanged(sender As Object, e As EventArgs) Handles allRB2.CheckedChanged
         PerformSearch()
+    End Sub
+
+    Private Sub ViewEditDetailsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewEditDetailsToolStripMenuItem.Click
+        ' Check if a row is selected in the DataGridView
+        If employeesDVG.SelectedRows.Count > 0 Then
+            ' Get the selected row
+            Dim selectedRow As DataGridViewRow = employeesDVG.SelectedRows(0)
+
+            ' Extract data from the selected row
+            Dim emp_id As Integer = Convert.ToInt32(selectedRow.Cells("emp_id").Value.ToString())
+            Dim firstName As String = selectedRow.Cells("firstname").Value.ToString()
+            Dim lastName As String = selectedRow.Cells("lastname").Value.ToString()
+            Dim middleName As String = selectedRow.Cells("middlename").Value.ToString()
+            Dim age As Integer = Convert.ToInt32(selectedRow.Cells("age").Value.ToString())
+            Dim dateofbirth As Date = Convert.ToDateTime(selectedRow.Cells("dateofbirth").Value)
+            Dim gender As String = selectedRow.Cells("gender").Value.ToString()
+            Dim department As String = selectedRow.Cells("department").Value.ToString()
+            Dim position As String = selectedRow.Cells("position").Value.ToString()
+            Dim hired_date As Date = Convert.ToDateTime(selectedRow.Cells("hired_date").Value)
+            Dim emp_status As String = selectedRow.Cells("emp_status").Value.ToString()
+            ' Call the DisplayEmployeeDetails method in Form2 and pass emp_id
+            Form2.DisplayEmployeeDetails(emp_id, lastName, firstName, middleName, age, dateofbirth, gender, department, position, hired_date, emp_status)
+
+            ' Check if Form2 is already open
+            Dim form2Open As Boolean = False
+            For Each form As Form In Application.OpenForms
+                If TypeOf form Is Form2 Then
+                    ' Form2 is already open
+                    Dim form2 As Form2 = CType(form, Form2)
+                    ' Pass the data to Form2
+                    form2.DisplayEmployeeDetails(emp_id, lastName, firstName, middleName, age, dateofbirth, gender, department, position, hired_date, emp_status)
+                    ' Set the flag to true
+                    form2Open = True
+                    ' Bring Form2 to the front
+                    form2.BringToFront()
+                    Exit For
+                End If
+            Next
+
+            ' If Form2 is not already open, create a new instance and display it
+            If Not form2Open Then
+                Dim form2 As New Form2()
+                form2.DisplayEmployeeDetails(emp_id, lastName, firstName, middleName, age, dateofbirth, gender, department, position, hired_date, emp_status)
+                form2.Show()
+            End If
+        Else
+            MessageBox.Show("Please select a row in the DataGridView.", "No Row Selected", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+
+    End Sub
+
+
+
+    Private Sub DeleteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteToolStripMenuItem.Click
+
     End Sub
 End Class
