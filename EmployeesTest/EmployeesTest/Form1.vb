@@ -157,13 +157,8 @@ Public Class Form1
         PerformSearch()
     End Sub
     Private Sub departmentCB_SelectedIndexChanged(sender As Object, e As EventArgs) Handles departmentCB.SelectedIndexChanged
-        ' Set the selected department from the combo box
         Dim selectedDepartment As String = departmentCB.SelectedItem?.ToString()
-
-        ' Call the PerformSearch method to apply all filters
         PerformSearch()
-
-
     End Sub
 
 
