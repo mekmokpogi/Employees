@@ -33,7 +33,6 @@ Partial Class Form3
         Me.Label8 = New System.Windows.Forms.Label()
         Me.positionTB = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.departmentTB = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -45,12 +44,14 @@ Partial Class Form3
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lastnameTB = New System.Windows.Forms.TextBox()
         Me.genderCB = New System.Windows.Forms.ComboBox()
+        Me.departmentCB = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.departmentCB)
         Me.GroupBox1.Controls.Add(Me.hired_dateDTP)
         Me.GroupBox1.Controls.Add(Me.dateofbirthDTP)
         Me.GroupBox1.Controls.Add(Me.cancelBTN)
@@ -60,7 +61,6 @@ Partial Class Form3
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.positionTB)
         Me.GroupBox1.Controls.Add(Me.Label9)
-        Me.GroupBox1.Controls.Add(Me.departmentTB)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label4)
@@ -168,13 +168,6 @@ Partial Class Form3
         Me.Label9.TabIndex = 13
         Me.Label9.Text = "Department:"
         '
-        'departmentTB
-        '
-        Me.departmentTB.Location = New System.Drawing.Point(724, 37)
-        Me.departmentTB.Name = "departmentTB"
-        Me.departmentTB.Size = New System.Drawing.Size(145, 22)
-        Me.departmentTB.TabIndex = 12
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -267,6 +260,14 @@ Partial Class Form3
         Me.genderCB.Size = New System.Drawing.Size(145, 24)
         Me.genderCB.TabIndex = 20
         '
+        'departmentCB
+        '
+        Me.departmentCB.FormattingEnabled = True
+        Me.departmentCB.Location = New System.Drawing.Point(724, 35)
+        Me.departmentCB.Name = "departmentCB"
+        Me.departmentCB.Size = New System.Drawing.Size(145, 24)
+        Me.departmentCB.TabIndex = 23
+        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -292,7 +293,6 @@ Partial Class Form3
     Friend WithEvents Label8 As Label
     Friend WithEvents positionTB As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents departmentTB As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
@@ -305,4 +305,5 @@ Partial Class Form3
     Friend WithEvents lastnameTB As TextBox
     Friend WithEvents genderCB As ComboBox
     Friend WithEvents hired_dateDTP As DateTimePicker
+    Friend WithEvents departmentCB As ComboBox
 End Class

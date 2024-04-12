@@ -55,6 +55,7 @@ Partial Class Form1
         Me.lastpageBTN = New System.Windows.Forms.Button()
         Me.firstpageBTN = New System.Windows.Forms.Button()
         Me.pagenumTB = New System.Windows.Forms.TextBox()
+        Me.rstBTN = New System.Windows.Forms.Button()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -127,7 +128,6 @@ Partial Class Form1
         Me.departmentCB.Name = "departmentCB"
         Me.departmentCB.Size = New System.Drawing.Size(163, 24)
         Me.departmentCB.TabIndex = 10
-        Me.departmentCB.Text = "Department"
         '
         'Label4
         '
@@ -218,7 +218,7 @@ Partial Class Form1
         Me.fromDTP.Name = "fromDTP"
         Me.fromDTP.Size = New System.Drawing.Size(115, 22)
         Me.fromDTP.TabIndex = 0
-        Me.fromDTP.Value = New Date(2024, 1, 1, 0, 0, 0, 0)
+        Me.fromDTP.Value = New Date(1999, 1, 1, 0, 0, 0, 0)
         '
         'GroupBox1
         '
@@ -297,6 +297,7 @@ Partial Class Form1
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.rstBTN)
         Me.GroupBox4.Controls.Add(Me.GroupBox3)
         Me.GroupBox4.Controls.Add(Me.GroupBox5)
         Me.GroupBox4.Controls.Add(Me.GroupBox2)
@@ -381,6 +382,15 @@ Partial Class Form1
         Me.pagenumTB.TabIndex = 24
         Me.pagenumTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+        'rstBTN
+        '
+        Me.rstBTN.Location = New System.Drawing.Point(802, -1)
+        Me.rstBTN.Name = "rstBTN"
+        Me.rstBTN.Size = New System.Drawing.Size(75, 23)
+        Me.rstBTN.TabIndex = 11
+        Me.rstBTN.Text = "Reset"
+        Me.rstBTN.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -448,4 +458,5 @@ Partial Class Form1
     Friend WithEvents lastpageBTN As Button
     Friend WithEvents firstpageBTN As Button
     Friend WithEvents pagenumTB As TextBox
+    Friend WithEvents rstBTN As Button
 End Class

@@ -7,6 +7,7 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
+            toDTP.Value = DateTime.Today
             Using connection As New NpgsqlConnection(connectionString)
                 connection.Open()
 
@@ -363,6 +364,28 @@ Public Class Form1
             ' Reset TextBox value if invalid page number is entered
             pagenumTB.Text = currentPage.ToString()
         End If
+    End Sub
+
+    Private Sub rstBTN_Click(sender As Object, e As EventArgs) Handles rstBTN.Click
+        ' Clear text boxes
+        lastnameTB.Clear()
+        firstnameTB.Clear()
+        ' Reset date pickers
+        fromDTP.Value = New DateTime(2000, 1, 1)
+        toDTP.Value = DateTime.Now
+        ' Reset radio buttons
+        deptheadRB.Checked = False
+        staffRB.Checked = False
+        oicRB.Checked = False
+        regularRB.Checked = False
+        probationaryRB.Checked = False
+        allRB.Checked = True
+        allRB2.Checked = True
+        ' Clear department combo box selection
+        departmentCB.SelectedIndex = -1
+
+        ' Reload data
+        LoadData()
     End Sub
 
 End Class
