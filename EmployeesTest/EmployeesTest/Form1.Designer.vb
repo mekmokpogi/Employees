@@ -43,18 +43,26 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lastnameTB = New System.Windows.Forms.TextBox()
         Me.employeesDVG = New System.Windows.Forms.DataGridView()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.empdvgCMS = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ViewEditDetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.addTS = New System.Windows.Forms.ToolStripButton()
+        Me.prevBTN = New System.Windows.Forms.Button()
+        Me.nxtBTN = New System.Windows.Forms.Button()
+        Me.lastpageBTN = New System.Windows.Forms.Button()
+        Me.firstpageBTN = New System.Windows.Forms.Button()
+        Me.pagenumTB = New System.Windows.Forms.TextBox()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.employeesDVG, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.empdvgCMS.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
-        Me.empdvgCMS.SuspendLayout()
+        Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'regularRB
@@ -227,7 +235,7 @@ Partial Class Form1
         '
         'firstnameTB
         '
-        Me.firstnameTB.Location = New System.Drawing.Point(98, 54)
+        Me.firstnameTB.Location = New System.Drawing.Point(101, 71)
         Me.firstnameTB.Name = "firstnameTB"
         Me.firstnameTB.Size = New System.Drawing.Size(185, 22)
         Me.firstnameTB.TabIndex = 17
@@ -235,7 +243,7 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(9, 57)
+        Me.Label2.Location = New System.Drawing.Point(12, 74)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(80, 17)
         Me.Label2.TabIndex = 16
@@ -244,7 +252,7 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(9, 20)
+        Me.Label1.Location = New System.Drawing.Point(12, 37)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(80, 17)
         Me.Label1.TabIndex = 15
@@ -252,7 +260,7 @@ Partial Class Form1
         '
         'lastnameTB
         '
-        Me.lastnameTB.Location = New System.Drawing.Point(98, 17)
+        Me.lastnameTB.Location = New System.Drawing.Point(101, 34)
         Me.lastnameTB.Name = "lastnameTB"
         Me.lastnameTB.Size = New System.Drawing.Size(185, 22)
         Me.lastnameTB.TabIndex = 14
@@ -263,9 +271,29 @@ Partial Class Form1
         Me.employeesDVG.ContextMenuStrip = Me.empdvgCMS
         Me.employeesDVG.Location = New System.Drawing.Point(12, 227)
         Me.employeesDVG.Name = "employeesDVG"
+        Me.employeesDVG.ReadOnly = True
         Me.employeesDVG.RowTemplate.Height = 24
         Me.employeesDVG.Size = New System.Drawing.Size(887, 294)
         Me.employeesDVG.TabIndex = 11
+        '
+        'empdvgCMS
+        '
+        Me.empdvgCMS.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.empdvgCMS.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewEditDetailsToolStripMenuItem, Me.DeleteToolStripMenuItem})
+        Me.empdvgCMS.Name = "ContextMenuStrip1"
+        Me.empdvgCMS.Size = New System.Drawing.Size(193, 52)
+        '
+        'ViewEditDetailsToolStripMenuItem
+        '
+        Me.ViewEditDetailsToolStripMenuItem.Name = "ViewEditDetailsToolStripMenuItem"
+        Me.ViewEditDetailsToolStripMenuItem.Size = New System.Drawing.Size(192, 24)
+        Me.ViewEditDetailsToolStripMenuItem.Text = "View/Edit Details"
+        '
+        'DeleteToolStripMenuItem
+        '
+        Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(192, 24)
+        Me.DeleteToolStripMenuItem.Text = "Delete"
         '
         'GroupBox4
         '
@@ -290,30 +318,80 @@ Partial Class Form1
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Department"
         '
-        'empdvgCMS
+        'ToolStrip1
         '
-        Me.empdvgCMS.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.empdvgCMS.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewEditDetailsToolStripMenuItem, Me.DeleteToolStripMenuItem})
-        Me.empdvgCMS.Name = "ContextMenuStrip1"
-        Me.empdvgCMS.Size = New System.Drawing.Size(211, 80)
+        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.addTS})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(912, 27)
+        Me.ToolStrip1.TabIndex = 19
+        Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'ViewEditDetailsToolStripMenuItem
+        'addTS
         '
-        Me.ViewEditDetailsToolStripMenuItem.Name = "ViewEditDetailsToolStripMenuItem"
-        Me.ViewEditDetailsToolStripMenuItem.Size = New System.Drawing.Size(210, 24)
-        Me.ViewEditDetailsToolStripMenuItem.Text = "View/Edit Details"
+        Me.addTS.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.addTS.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.addTS.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.addTS.Name = "addTS"
+        Me.addTS.Size = New System.Drawing.Size(41, 24)
+        Me.addTS.Text = "Add"
         '
-        'DeleteToolStripMenuItem
+        'prevBTN
         '
-        Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(210, 24)
-        Me.DeleteToolStripMenuItem.Text = "Delete"
+        Me.prevBTN.Location = New System.Drawing.Point(384, 533)
+        Me.prevBTN.Name = "prevBTN"
+        Me.prevBTN.Size = New System.Drawing.Size(54, 23)
+        Me.prevBTN.TabIndex = 20
+        Me.prevBTN.Text = "<"
+        Me.prevBTN.UseVisualStyleBackColor = True
+        '
+        'nxtBTN
+        '
+        Me.nxtBTN.Location = New System.Drawing.Point(501, 533)
+        Me.nxtBTN.Name = "nxtBTN"
+        Me.nxtBTN.Size = New System.Drawing.Size(54, 23)
+        Me.nxtBTN.TabIndex = 21
+        Me.nxtBTN.Text = ">"
+        Me.nxtBTN.UseVisualStyleBackColor = True
+        '
+        'lastpageBTN
+        '
+        Me.lastpageBTN.Location = New System.Drawing.Point(562, 533)
+        Me.lastpageBTN.Name = "lastpageBTN"
+        Me.lastpageBTN.Size = New System.Drawing.Size(54, 23)
+        Me.lastpageBTN.TabIndex = 22
+        Me.lastpageBTN.Text = ">>"
+        Me.lastpageBTN.UseVisualStyleBackColor = True
+        '
+        'firstpageBTN
+        '
+        Me.firstpageBTN.Location = New System.Drawing.Point(324, 533)
+        Me.firstpageBTN.Name = "firstpageBTN"
+        Me.firstpageBTN.Size = New System.Drawing.Size(54, 23)
+        Me.firstpageBTN.TabIndex = 23
+        Me.firstpageBTN.Text = "<<"
+        Me.firstpageBTN.UseVisualStyleBackColor = True
+        '
+        'pagenumTB
+        '
+        Me.pagenumTB.Location = New System.Drawing.Point(453, 533)
+        Me.pagenumTB.Name = "pagenumTB"
+        Me.pagenumTB.Size = New System.Drawing.Size(35, 22)
+        Me.pagenumTB.TabIndex = 24
+        Me.pagenumTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(912, 533)
+        Me.ClientSize = New System.Drawing.Size(912, 566)
+        Me.Controls.Add(Me.pagenumTB)
+        Me.Controls.Add(Me.firstpageBTN)
+        Me.Controls.Add(Me.lastpageBTN)
+        Me.Controls.Add(Me.nxtBTN)
+        Me.Controls.Add(Me.prevBTN)
+        Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.firstnameTB)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -329,9 +407,11 @@ Partial Class Form1
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.employeesDVG, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.empdvgCMS.ResumeLayout(False)
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox5.ResumeLayout(False)
-        Me.empdvgCMS.ResumeLayout(False)
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -361,4 +441,11 @@ Partial Class Form1
     Friend WithEvents empdvgCMS As ContextMenuStrip
     Friend WithEvents ViewEditDetailsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DeleteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents addTS As ToolStripButton
+    Friend WithEvents prevBTN As Button
+    Friend WithEvents nxtBTN As Button
+    Friend WithEvents lastpageBTN As Button
+    Friend WithEvents firstpageBTN As Button
+    Friend WithEvents pagenumTB As TextBox
 End Class

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form2
+Partial Class Form3
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,10 +23,11 @@ Partial Class Form2
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.hired_dateDTP = New System.Windows.Forms.DateTimePicker()
+        Me.dateofbirthDTP = New System.Windows.Forms.DateTimePicker()
         Me.cancelBTN = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.saveBTN = New System.Windows.Forms.Button()
-        Me.hired_dateTB = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.emp_statusCB = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -34,9 +35,7 @@ Partial Class Form2
         Me.Label9 = New System.Windows.Forms.Label()
         Me.departmentTB = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.dateofbirthTB = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.genderTB = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ageTB = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -45,25 +44,25 @@ Partial Class Form2
         Me.firstnameTB = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lastnameTB = New System.Windows.Forms.TextBox()
+        Me.genderCB = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.hired_dateDTP)
+        Me.GroupBox1.Controls.Add(Me.dateofbirthDTP)
         Me.GroupBox1.Controls.Add(Me.cancelBTN)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.saveBTN)
-        Me.GroupBox1.Controls.Add(Me.hired_dateTB)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.positionTB)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.departmentTB)
         Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.dateofbirthTB)
         Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.genderTB)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.ageTB)
         Me.GroupBox1.Controls.Add(Me.Label3)
@@ -72,12 +71,31 @@ Partial Class Form2
         Me.GroupBox1.Controls.Add(Me.firstnameTB)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.lastnameTB)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Controls.Add(Me.genderCB)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 16)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(888, 255)
-        Me.GroupBox1.TabIndex = 0
+        Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Employee Information"
+        '
+        'hired_dateDTP
+        '
+        Me.hired_dateDTP.CustomFormat = "dd/mm/yyyy"
+        Me.hired_dateDTP.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.hired_dateDTP.Location = New System.Drawing.Point(724, 119)
+        Me.hired_dateDTP.Name = "hired_dateDTP"
+        Me.hired_dateDTP.Size = New System.Drawing.Size(144, 22)
+        Me.hired_dateDTP.TabIndex = 22
+        '
+        'dateofbirthDTP
+        '
+        Me.dateofbirthDTP.CustomFormat = "dd/mm/yyyy"
+        Me.dateofbirthDTP.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dateofbirthDTP.Location = New System.Drawing.Point(422, 37)
+        Me.dateofbirthDTP.Name = "dateofbirthDTP"
+        Me.dateofbirthDTP.Size = New System.Drawing.Size(144, 22)
+        Me.dateofbirthDTP.TabIndex = 21
         '
         'cancelBTN
         '
@@ -106,13 +124,6 @@ Partial Class Form2
         Me.saveBTN.Text = "Save"
         Me.saveBTN.UseVisualStyleBackColor = True
         '
-        'hired_dateTB
-        '
-        Me.hired_dateTB.Location = New System.Drawing.Point(724, 117)
-        Me.hired_dateTB.Name = "hired_dateTB"
-        Me.hired_dateTB.Size = New System.Drawing.Size(145, 22)
-        Me.hired_dateTB.TabIndex = 16
-        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.emp_statusCB)
@@ -126,6 +137,7 @@ Partial Class Form2
         'emp_statusCB
         '
         Me.emp_statusCB.FormattingEnabled = True
+        Me.emp_statusCB.Items.AddRange(New Object() {"probationary", "regular"})
         Me.emp_statusCB.Location = New System.Drawing.Point(16, 32)
         Me.emp_statusCB.Name = "emp_statusCB"
         Me.emp_statusCB.Size = New System.Drawing.Size(121, 24)
@@ -166,18 +178,11 @@ Partial Class Form2
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(324, 40)
+        Me.Label6.Location = New System.Drawing.Point(324, 38)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(91, 17)
         Me.Label6.TabIndex = 11
         Me.Label6.Text = "Date of Birth:"
-        '
-        'dateofbirthTB
-        '
-        Me.dateofbirthTB.Location = New System.Drawing.Point(421, 37)
-        Me.dateofbirthTB.Name = "dateofbirthTB"
-        Me.dateofbirthTB.Size = New System.Drawing.Size(145, 22)
-        Me.dateofbirthTB.TabIndex = 10
         '
         'Label5
         '
@@ -187,13 +192,6 @@ Partial Class Form2
         Me.Label5.Size = New System.Drawing.Size(60, 17)
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "Gender:"
-        '
-        'genderTB
-        '
-        Me.genderTB.Location = New System.Drawing.Point(421, 117)
-        Me.genderTB.Name = "genderTB"
-        Me.genderTB.Size = New System.Drawing.Size(145, 22)
-        Me.genderTB.TabIndex = 8
         '
         'Label4
         '
@@ -206,6 +204,7 @@ Partial Class Form2
         '
         'ageTB
         '
+        Me.ageTB.Enabled = False
         Me.ageTB.Location = New System.Drawing.Point(421, 75)
         Me.ageTB.Name = "ageTB"
         Me.ageTB.Size = New System.Drawing.Size(145, 22)
@@ -259,14 +258,23 @@ Partial Class Form2
         Me.lastnameTB.Size = New System.Drawing.Size(145, 22)
         Me.lastnameTB.TabIndex = 0
         '
-        'Form2
+        'genderCB
+        '
+        Me.genderCB.FormattingEnabled = True
+        Me.genderCB.Items.AddRange(New Object() {"Male", "Female"})
+        Me.genderCB.Location = New System.Drawing.Point(421, 119)
+        Me.genderCB.Name = "genderCB"
+        Me.genderCB.Size = New System.Drawing.Size(145, 24)
+        Me.genderCB.TabIndex = 20
+        '
+        'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(912, 286)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "Form2"
-        Me.Text = "View/Edit"
+        Me.Name = "Form3"
+        Me.Text = "Add"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
@@ -275,14 +283,10 @@ Partial Class Form2
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents firstnameTB As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents lastnameTB As TextBox
+    Friend WithEvents dateofbirthDTP As DateTimePicker
     Friend WithEvents cancelBTN As Button
     Friend WithEvents Label7 As Label
     Friend WithEvents saveBTN As Button
-    Friend WithEvents hired_dateTB As TextBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents emp_statusCB As ComboBox
     Friend WithEvents Label8 As Label
@@ -290,11 +294,15 @@ Partial Class Form2
     Friend WithEvents Label9 As Label
     Friend WithEvents departmentTB As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents dateofbirthTB As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents genderTB As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents ageTB As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents middlenameTB As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents firstnameTB As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents lastnameTB As TextBox
+    Friend WithEvents genderCB As ComboBox
+    Friend WithEvents hired_dateDTP As DateTimePicker
 End Class
