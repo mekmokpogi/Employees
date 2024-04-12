@@ -23,28 +23,28 @@ Partial Class Form2
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.firstnameTB = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.lastnameTB = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.middlenameTB = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.ageTB = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.genderTB = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.dateofbirthTB = New System.Windows.Forms.TextBox()
+        Me.cancelBTN = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.saveBTN = New System.Windows.Forms.Button()
         Me.hired_dateTB = New System.Windows.Forms.TextBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.emp_statusCB = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.positionTB = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.departmentTB = New System.Windows.Forms.TextBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.emp_statusCB = New System.Windows.Forms.ComboBox()
-        Me.saveBTN = New System.Windows.Forms.Button()
-        Me.cancelBTN = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.dateofbirthTB = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.genderTB = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.ageTB = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.middlenameTB = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.firstnameTB = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lastnameTB = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -79,101 +79,14 @@ Partial Class Form2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Employee Information"
         '
-        'Label2
+        'cancelBTN
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(27, 78)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(80, 17)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "First Name:"
-        '
-        'firstnameTB
-        '
-        Me.firstnameTB.Location = New System.Drawing.Point(127, 75)
-        Me.firstnameTB.Name = "firstnameTB"
-        Me.firstnameTB.Size = New System.Drawing.Size(145, 22)
-        Me.firstnameTB.TabIndex = 2
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(27, 40)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(80, 17)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Last Name:"
-        '
-        'lastnameTB
-        '
-        Me.lastnameTB.Location = New System.Drawing.Point(127, 37)
-        Me.lastnameTB.Name = "lastnameTB"
-        Me.lastnameTB.Size = New System.Drawing.Size(145, 22)
-        Me.lastnameTB.TabIndex = 0
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(27, 120)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(94, 17)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Middle Name:"
-        '
-        'middlenameTB
-        '
-        Me.middlenameTB.Location = New System.Drawing.Point(127, 117)
-        Me.middlenameTB.Name = "middlenameTB"
-        Me.middlenameTB.Size = New System.Drawing.Size(145, 22)
-        Me.middlenameTB.TabIndex = 4
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(324, 40)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(37, 17)
-        Me.Label4.TabIndex = 7
-        Me.Label4.Text = "Age:"
-        '
-        'ageTB
-        '
-        Me.ageTB.Location = New System.Drawing.Point(421, 37)
-        Me.ageTB.Name = "ageTB"
-        Me.ageTB.Size = New System.Drawing.Size(145, 22)
-        Me.ageTB.TabIndex = 6
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(324, 120)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(60, 17)
-        Me.Label5.TabIndex = 9
-        Me.Label5.Text = "Gender:"
-        '
-        'genderTB
-        '
-        Me.genderTB.Location = New System.Drawing.Point(421, 117)
-        Me.genderTB.Name = "genderTB"
-        Me.genderTB.Size = New System.Drawing.Size(145, 22)
-        Me.genderTB.TabIndex = 8
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(324, 78)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(91, 17)
-        Me.Label6.TabIndex = 11
-        Me.Label6.Text = "Date of Birth:"
-        '
-        'dateofbirthTB
-        '
-        Me.dateofbirthTB.Location = New System.Drawing.Point(421, 75)
-        Me.dateofbirthTB.Name = "dateofbirthTB"
-        Me.dateofbirthTB.Size = New System.Drawing.Size(145, 22)
-        Me.dateofbirthTB.TabIndex = 10
+        Me.cancelBTN.Location = New System.Drawing.Point(773, 199)
+        Me.cancelBTN.Name = "cancelBTN"
+        Me.cancelBTN.Size = New System.Drawing.Size(96, 37)
+        Me.cancelBTN.TabIndex = 20
+        Me.cancelBTN.Text = "Cancel"
+        Me.cancelBTN.UseVisualStyleBackColor = True
         '
         'Label7
         '
@@ -184,12 +97,39 @@ Partial Class Form2
         Me.Label7.TabIndex = 17
         Me.Label7.Text = "Date Hired:"
         '
+        'saveBTN
+        '
+        Me.saveBTN.Location = New System.Drawing.Point(671, 199)
+        Me.saveBTN.Name = "saveBTN"
+        Me.saveBTN.Size = New System.Drawing.Size(96, 37)
+        Me.saveBTN.TabIndex = 19
+        Me.saveBTN.Text = "Save"
+        Me.saveBTN.UseVisualStyleBackColor = True
+        '
         'hired_dateTB
         '
         Me.hired_dateTB.Location = New System.Drawing.Point(724, 117)
         Me.hired_dateTB.Name = "hired_dateTB"
         Me.hired_dateTB.Size = New System.Drawing.Size(145, 22)
         Me.hired_dateTB.TabIndex = 16
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.emp_statusCB)
+        Me.GroupBox2.Location = New System.Drawing.Point(30, 163)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(158, 73)
+        Me.GroupBox2.TabIndex = 18
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Employment Status"
+        '
+        'emp_statusCB
+        '
+        Me.emp_statusCB.FormattingEnabled = True
+        Me.emp_statusCB.Location = New System.Drawing.Point(16, 32)
+        Me.emp_statusCB.Name = "emp_statusCB"
+        Me.emp_statusCB.Size = New System.Drawing.Size(121, 24)
+        Me.emp_statusCB.TabIndex = 19
         '
         'Label8
         '
@@ -223,41 +163,101 @@ Partial Class Form2
         Me.departmentTB.Size = New System.Drawing.Size(145, 22)
         Me.departmentTB.TabIndex = 12
         '
-        'GroupBox2
+        'Label6
         '
-        Me.GroupBox2.Controls.Add(Me.emp_statusCB)
-        Me.GroupBox2.Location = New System.Drawing.Point(30, 163)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(158, 73)
-        Me.GroupBox2.TabIndex = 18
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Employment Status"
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(324, 78)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(91, 17)
+        Me.Label6.TabIndex = 11
+        Me.Label6.Text = "Date of Birth:"
         '
-        'emp_statusCB
+        'dateofbirthTB
         '
-        Me.emp_statusCB.FormattingEnabled = True
-        Me.emp_statusCB.Location = New System.Drawing.Point(16, 32)
-        Me.emp_statusCB.Name = "emp_statusCB"
-        Me.emp_statusCB.Size = New System.Drawing.Size(121, 24)
-        Me.emp_statusCB.TabIndex = 19
+        Me.dateofbirthTB.Location = New System.Drawing.Point(421, 75)
+        Me.dateofbirthTB.Name = "dateofbirthTB"
+        Me.dateofbirthTB.Size = New System.Drawing.Size(145, 22)
+        Me.dateofbirthTB.TabIndex = 10
         '
-        'saveBTN
+        'Label5
         '
-        Me.saveBTN.Location = New System.Drawing.Point(671, 199)
-        Me.saveBTN.Name = "saveBTN"
-        Me.saveBTN.Size = New System.Drawing.Size(96, 37)
-        Me.saveBTN.TabIndex = 19
-        Me.saveBTN.Text = "Save"
-        Me.saveBTN.UseVisualStyleBackColor = True
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(324, 120)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(60, 17)
+        Me.Label5.TabIndex = 9
+        Me.Label5.Text = "Gender:"
         '
-        'cancelBTN
+        'genderTB
         '
-        Me.cancelBTN.Location = New System.Drawing.Point(773, 199)
-        Me.cancelBTN.Name = "cancelBTN"
-        Me.cancelBTN.Size = New System.Drawing.Size(96, 37)
-        Me.cancelBTN.TabIndex = 20
-        Me.cancelBTN.Text = "Cancel"
-        Me.cancelBTN.UseVisualStyleBackColor = True
+        Me.genderTB.Location = New System.Drawing.Point(421, 117)
+        Me.genderTB.Name = "genderTB"
+        Me.genderTB.Size = New System.Drawing.Size(145, 22)
+        Me.genderTB.TabIndex = 8
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(324, 40)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(37, 17)
+        Me.Label4.TabIndex = 7
+        Me.Label4.Text = "Age:"
+        '
+        'ageTB
+        '
+        Me.ageTB.Location = New System.Drawing.Point(421, 37)
+        Me.ageTB.Name = "ageTB"
+        Me.ageTB.Size = New System.Drawing.Size(145, 22)
+        Me.ageTB.TabIndex = 6
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(27, 120)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(94, 17)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "Middle Name:"
+        '
+        'middlenameTB
+        '
+        Me.middlenameTB.Location = New System.Drawing.Point(127, 117)
+        Me.middlenameTB.Name = "middlenameTB"
+        Me.middlenameTB.Size = New System.Drawing.Size(145, 22)
+        Me.middlenameTB.TabIndex = 4
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(27, 78)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(80, 17)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "First Name:"
+        '
+        'firstnameTB
+        '
+        Me.firstnameTB.Location = New System.Drawing.Point(127, 75)
+        Me.firstnameTB.Name = "firstnameTB"
+        Me.firstnameTB.Size = New System.Drawing.Size(145, 22)
+        Me.firstnameTB.TabIndex = 2
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(27, 40)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(80, 17)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Last Name:"
+        '
+        'lastnameTB
+        '
+        Me.lastnameTB.Location = New System.Drawing.Point(127, 37)
+        Me.lastnameTB.Name = "lastnameTB"
+        Me.lastnameTB.Size = New System.Drawing.Size(145, 22)
+        Me.lastnameTB.TabIndex = 0
         '
         'Form2
         '
