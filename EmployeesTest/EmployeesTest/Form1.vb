@@ -20,7 +20,6 @@ Public Class Form1
         Catch ex As Exception
             MessageBox.Show("Error loading departments: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
-        ' Refresh DataGridView
         LoadData()
     End Sub
 
